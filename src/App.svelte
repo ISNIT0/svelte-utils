@@ -1,5 +1,7 @@
 <script>
-  import { Button, Form, Spinner, Sprite } from "./export.js";
+  import ExampleRoute1 from "./exampleRoutes/ExampleRoute1.svelte";
+  import ExampleRoute2 from "./exampleRoutes/ExampleRoute2.svelte";
+  import { Button, Form, Spinner, Sprite, StackRouter } from "./export.js";
 
   function exampleButtonHandler() {
     return new Promise((resolve, reject) => {
@@ -15,7 +17,35 @@
 
   let spriteIndex = 0;
   let spritePlaying = false;
-  setInterval(() => spritePlaying && (spriteIndex = (spriteIndex + 1) % 32), 100);
+  setInterval(
+    () => spritePlaying && (spriteIndex = (spriteIndex + 1) % 32),
+    100
+  );
+
+  let routerStack;
+  let router;
+  function routerReady(_router) {
+    router = _router;
+  }
+
+  const routes = [
+    {
+      component: ExampleRoute1,
+      props: { name: "Fred" }
+    },
+    {
+      component: ExampleRoute2,
+      props: { name: "Joe" }
+    },
+    {
+      component: ExampleRoute1,
+      props: { name: "Max" }
+    },
+    {
+      component: ExampleRoute2,
+      props: { name: "Joe" }
+    }
+  ];
 </script>
 
 <style>
@@ -29,16 +59,34 @@
 </style>
 
 <main>
+  <h2>Stack Router</h2>
+  <div>
+    <StackRouter
+      onReady={routerReady}
+      defaultRoute={routes[0]}
+      bind:stack={routerStack} />
+  </div>
+  <small>Stack Length: {routerStack && routerStack.length}</small>
+  <div>
+    <button on:click={() => router.pushRoute(routes[routerStack.length % 3])}>
+      Push To Stack
+    </button>
+    <button on:click={() => router.popRoute()}>Pop From Stack</button>
+  </div>
   <h2>Sprite</h2>
-  <Sprite
-    spritesheetUrl="https://i.stack.imgur.com/wFCJb.png"
-    spriteWidth="32"
-    spriteHeight="32"
-    width="50"
-    height="50"
-    rowLength="6"
-    index={spriteIndex} />
-    <button on:click={() => spritePlaying = !spritePlaying}>Play/Pause Sprite</button>
+  <div style="display:flex;justify-content:center;">
+    <Sprite
+      spritesheetUrl="https://i.stack.imgur.com/wFCJb.png"
+      spriteWidth="32"
+      spriteHeight="32"
+      width="50"
+      height="50"
+      rowLength="6"
+      index={spriteIndex} />
+  </div>
+  <button on:click={() => (spritePlaying = !spritePlaying)}>
+    Play/Pause Sprite
+  </button>
   <h2>Spinner</h2>
   <div style="display:flex;justify-content:center;">
     <Spinner black={true} size="50px" />
