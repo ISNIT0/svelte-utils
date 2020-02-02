@@ -2,7 +2,7 @@
 > Handy Svelte components for the whole family
 
 TL;DR:
-- MIT Licensed Simple Svelte Components
+- MIT Licensed Pretty Svelte Components
 - Live demo of components: https://svelte-utils.netlify.com/
 - Example code: [./src/App.svelte](./src/App.svelte)
 
