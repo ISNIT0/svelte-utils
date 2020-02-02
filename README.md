@@ -1,6 +1,11 @@
 # Svelte Utils
 > Handy Svelte components for the whole family
 
+TL;DR:
+- MIT Licensed Simple Svelte Components
+- Live demo of components: https://svelte-utils.netlify.com/
+- Example code: [./src/App.svelte](./src/App.svelte)
+
 Included:
 - Button
 - Form
@@ -112,6 +117,9 @@ Parameters
 - width?: `number` (width to scale sprite to)
 - height?: `number` (height to scale sprite to)
 - rowLength?: `number` (number of sprites per row on spritesheet)
+
+Advanced Parameters
+- getSpritePos?: `(spriteIndex) => { x: string, y: string }`
 
 ## StackRouter
 ```html
