@@ -7,6 +7,7 @@ TL;DR:
 - Example code: [./src/App.svelte](./src/App.svelte)
 
 Included:
+- 
 - [Button](#button)
 - [Form](#form)
 - [Spinner](#spinner)
@@ -21,6 +22,14 @@ To override all Svelte Utils default colors, set the following with CSS:
 .svelte-utils-theme-color {
     color: white;
 }
+```
+
+# Installation
+```bash
+npm i svelte-utils
+```
+```typescript
+import { Button, Form, Spinner } from 'svelte-utils';
 ```
 
 ## Button
