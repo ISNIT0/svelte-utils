@@ -52,10 +52,12 @@
   main {
     text-align: center;
     padding: 1em;
-    max-width: 500px;
+    width: 100%;
+    max-width: 600px;
     margin: 0 auto;
     overflow-y: auto;
   }
+
   .cont {
     border: 1px solid #ddd;
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.08);
