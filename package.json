@@ -7,6 +7,15 @@
     "dev": "rollup -c -w",
     "start": "sirv public"
   },
+  "author": {
+    "name": "Joseph E. Reeve",
+    "url": "https://simmsreeve.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ISNIT0/svelte-utils"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
     "@rollup/plugin-node-resolve": "^7.0.0",
