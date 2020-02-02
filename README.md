@@ -7,11 +7,11 @@ TL;DR:
 - Example code: [./src/App.svelte](./src/App.svelte)
 
 Included:
-- Button
-- Form
-- Spinner
-- Sprite
-- StackRouter
+- [Button](#button)
+- [Form](#form)
+- [Spinner](#spinner)
+- [Sprite](#sprite)
+- [StackRouter](#stackrouter)
 
 To override all Svelte Utils default colors, set the following with CSS:
 ```css
