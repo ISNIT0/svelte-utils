@@ -48,23 +48,6 @@
   ];
 </script>
 
-<style>
-  main {
-    text-align: center;
-    padding: 1em;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    overflow-y: auto;
-  }
-
-  .cont {
-    border: 1px solid #ddd;
-    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.08);
-    margin: 20px 0;
-    padding: 40px;
-  }
-</style>
 
 <main>
   <h1>Svelte Utils Demos</h1>
