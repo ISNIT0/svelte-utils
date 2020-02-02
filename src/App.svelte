@@ -48,9 +48,11 @@
   ];
 </script>
 
-
 <main>
   <h1>Svelte Utils Demos</h1>
+  <h3>
+    <a href="https://github.com/isnit0/svelte-utils">View on GitHub</a>
+  </h3>
   <hr />
   <h2>Buttons</h2>
   <div class="cont">
@@ -144,5 +146,7 @@
       <button on:click={() => router.popRoute()}>Pop From Stack</button>
     </div>
   </div>
-
+  <h3>
+    <a href="https://github.com/isnit0/svelte-utils">Star on GitHub</a>
+  </h3>
 </main>
