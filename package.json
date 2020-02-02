@@ -1,7 +1,7 @@
 {
-  "name": "svelte-app",
+  "name": "svelte-utils",
   "version": "1.0.0",
-  "main": "src/export.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
