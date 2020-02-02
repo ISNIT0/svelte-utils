@@ -93,9 +93,9 @@
       }
     }
   }}
-  class="campaign-theme-background">
+  class="svelte-utils-theme-background">
   <span class="text-cont">
-    <span class="text">
+    <span class="text svelte-utils-theme-color">
       <slot />
     </span>
   </span>
